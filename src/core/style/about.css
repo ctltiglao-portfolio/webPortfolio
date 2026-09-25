@@ -1,0 +1,266 @@
+.about {
+    /* min-height: 100vh; */
+
+    min-height: fit-content;
+    /* background: sienna; */
+}
+
+.about p {
+    font-size: 16px;
+    font-weight: 700;
+
+    /* color: var(--primary); */
+
+    text-align: start;
+}
+
+.title {
+    color: var(--primary);
+}
+
+.subtitle {
+    color: var(--secondary);
+}
+
+.about-header {
+    flex-direction: row;
+    display: flex;
+
+    /* padding: 0px 20px; */
+    min-height: 300px;
+    margin-top: 30px;
+}
+
+.header-left {
+    /* flex: 1;
+    margin-top: 50px; */
+
+    /* background: chocolate; */
+
+    flex: 1;
+    display: flex;
+    position: relative;
+}
+
+.header-right {
+    /* flex: 1;
+    display: flex;
+    justify-content: right;
+    position: relative; */
+
+    /* background: seagreen; */
+
+    flex: 1.5;
+    margin-top: 50px;
+    text-align: start;
+}
+
+.header-right h1 {
+    font-size: 2rem;
+    font-weight: 700;
+
+    text-align: start;
+
+    color: var(--text-primary);
+}
+
+.header-right p {
+    font-size: 16px;
+    color: var(--text-highlights);
+
+    text-align: start;
+}
+
+.image-bg {
+    width: 300px;
+    height: 300px;
+
+    background: var(--tertiary);
+    border-radius: 50%;
+
+    position: absolute;
+}
+
+.profile-image {
+    width: 300px;
+    height: auto;
+    z-index: 2;
+    display: block;
+}
+
+.about-divider {
+    margin: 35px 0 10px 0;
+    border: 1px solid var(--quinary);
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+
+    /* padding: 0px 20px; */
+}
+
+.skill-container {
+    display: flex;
+    flex-direction: row;
+
+    grid-template-rows: repeat(4, 1fr);
+    line-height: 1.5;
+}
+
+.skill h3 {
+    font-size: 16px;
+    text-align: start;
+
+    margin: 10px 0;
+}
+
+.skill h5 {
+    color: var(--text-primary);
+    font-size: 14px;
+
+    text-align: start;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.skill p {
+    color: var(--text-highlights);
+    font-size: 14px;
+
+    text-align: start;
+}
+
+.skill-card {
+    /* padding: 0 15px; */
+
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-icon {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+    background: var(--quinary);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--primary);
+    /* margin-bottom: 24px; */
+}
+
+.border-right {
+    border-right: 2px solid var(--white);
+    margin-right: 20px;
+}
+
+@media (max-width: 1199px) {
+    .about-header {
+        min-height: auto;
+        /* flex-direction: column-reverse; */
+        gap: 20px;
+
+        /* padding: 0px 10px; */
+    }
+
+    /* .skill {
+        padding: 0px 10px;
+    } */
+
+    .header-left {
+        /* margin-top: 30px; */
+
+        justify-content: center;
+        position: relative;
+        min-height: 280px;
+    }
+
+    .header-right {
+        /* justify-content: center;
+        position: relative;
+        min-height: 280px; */
+
+        margin-top: 10px;
+    }
+
+    .image-bg {
+        width: 250px;
+        height: 250px;
+    }
+
+    .profile-image {
+        width: 250px;
+    }
+
+    .about-divider {
+        margin: 10px 0 10px 0;
+        border: 1px solid var(--quinary);
+    }
+
+    .border-right {
+        border-right: 2px solid var(--white);
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-header {
+        min-height: auto;
+        flex-direction: column;
+        gap: 0px;
+
+        /* padding: 0px 10px; */
+    }
+
+    /* .skill {
+        padding: 0px 10px;
+    } */
+
+    .header-left {
+        /* margin-top: 0px; */
+
+        justify-content: center;
+        position: relative;
+        min-height: 280px;
+    }
+
+    .header-right {
+        margin-top: 0px;
+
+        /* justify-content: center;
+        position: relative;
+        min-height: 280px; */
+    }
+
+    .about-divider {
+        margin: 25px 0 10px 0;
+        border: 1px solid var(--quinary);
+    }
+
+    .skill-container {
+        display: flex;
+        flex-direction: column;
+
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .skill h3,
+    h5,
+    p {
+        font-size: 16px;
+    }
+
+    .skill-card {
+        padding: 10px 0;
+    }
+
+    .border-right {
+        margin: 0;
+        border-right: 0 none var(--white);
+        border-bottom: 2px solid var(--white);
+    }
+}
