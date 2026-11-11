@@ -80,9 +80,9 @@ export default function Sidebar() {
 
                             <span>{item.label}</span>
 
-                            {active === item.id && (
+                            {/* {active === item.id && (
                                 <div className="pointer"></div>
-                            )}
+                            )} */}
                         </button>
                     );
                 })}

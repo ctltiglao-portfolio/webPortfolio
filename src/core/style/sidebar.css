@@ -81,7 +81,7 @@
 }
 
 .menu-item.active {
-    color: var(--primary);
+    color: var(--white);
     font-weight: 700;
 }
 
@@ -149,7 +149,7 @@
     border-radius: 14px;
     border: 2px solid var(--secondary);
     color: var(--primary);
-    background: white;
+    background: #2C2C2C;
     font-weight: 700;
     display: flex;
     justify-content: center;

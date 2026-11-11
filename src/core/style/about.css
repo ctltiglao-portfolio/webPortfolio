@@ -7,7 +7,6 @@
 
 .about p {
     font-size: 16px;
-    font-weight: 700;
 
     /* color: var(--primary); */
 
@@ -161,7 +160,7 @@
 @media (max-width: 1199px) {
     .about-header {
         min-height: auto;
-        /* flex-direction: column-reverse; */
+        flex-direction: column;
         gap: 20px;
 
         /* padding: 0px 10px; */

@@ -1,6 +1,6 @@
 import "../core/style/about.css";
 
-import profile from "../assets/profile (2).png";
+import profile from "../assets/profile.png";
 import { aboutString } from "../core/constant/string";
 
 import { ChartNoAxesCombined, Database, Globe, Smartphone } from "lucide-react";

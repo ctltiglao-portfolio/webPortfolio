@@ -5,14 +5,12 @@
     /* background: sienna; */
 }
 
-.experience p {
+/* .experience p {
     font-size: 16px;
     font-weight: 700;
 
-    /* color: var(--primary); */
-
     text-align: start;
-}
+} */
 
 .title {
     color: var(--primary);
@@ -76,9 +74,11 @@
     margin: 0;
 }
 
-.work-card p {
+.work-date {
     font-size: 14px;
     color: var(--text-highlights);
+
+    font-weight: 700;
 }
 
 .designation {
@@ -87,6 +87,9 @@
 
 .company {
     color: var(--secondary);
+    font-style: italic;
+    margin: 0;
+    font-size: 16px;
 }
 
 .tag {
@@ -137,12 +140,12 @@
 }
 
 @media (max-width: 1199px) {
-    /* .work {
-        padding: 0px 10px;
-    } */
+    .work-card {
+        flex-direction: column;
+    }
 
     .card-right {
-        flex: 2;
+        flex: 1;
     }
 }
 

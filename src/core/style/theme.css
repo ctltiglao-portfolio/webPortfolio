@@ -2,20 +2,20 @@
     --primary: #F43F8C;
     --secondary: #EB6295;
     --tertiary: #FD9BC3;
-    --quaternary: #FDC2DB;
-    --quinary: #FCE4EE;
-    --senary: #0F172A;
+    --quaternary: #2C2C2C;
+    --quinary: #383838;
+    --senary: #333630;
 
-    --background: #FDF7FA;
+    --background: #222021;
 
     --white: #FFF;
     --black: #000;
 
-    --private: #F9DDB1;
-    --public: #DEEBF7;
+    --private: #FF7518;
+    --public: #2E5984;
 
-    --text-primary: #08060d;
-    --text-highlights: #6B6375;
+    --text-primary: #F43F8C;
+    --text-highlights: #FDC2DB;
 
     --font-heading: 'Century Gothic', 'Trebuchet MS', Arial, sans-serif;
     --font-body: Calibri, Arial, sans-serif;

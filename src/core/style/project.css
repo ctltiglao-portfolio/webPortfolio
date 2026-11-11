@@ -3,8 +3,8 @@
 }
 
 .project p {
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 14px;
+    color: var(--text-highlights);
 
     text-align: start;
 }
@@ -48,7 +48,7 @@
     flex: 1;
     margin-right: 10px;
 
-    align-content: center;
+    /* align-content: center; */
 }
 
 .screenshot {
@@ -96,11 +96,11 @@
     justify-content: flex-end;
 }
 
-.company {
+/* .company {
     font-size: 16px;
     color: var(--primary);
     margin: 0;
-}
+} */
 
 .company-tag {
     display: inline-flex;
@@ -112,7 +112,7 @@
     padding: 0 10px;
     border-radius: 9px;
 
-    color: var(--text-highlights);
+    color: var(--black);
     font-size: 12px;
     font-weight: 700;
 
@@ -138,6 +138,53 @@
 .card-right p {
     font-size: 14px;
     color: var(--text-highlights);
+}
+
+.tag {
+    display: flex;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+.tag-card {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    border-radius: 9px;
+
+    background: var(--quinary);
+    color: var(--text-highlights);
+    font-size: 12px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.view-more {
+    margin-top: 20px;
+    /* margin-left: 20px; */
+
+    color: var(--text-highlights);
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+    cursor: pointer;
+    transform: .3s;
+}
+
+.view-more:hover {
+    color: var(--primary);
 }
 
 /* .tag {
@@ -170,9 +217,9 @@
         gap: 10px;
     }
 
-    /* .project-card {
+    .project-card {
         flex-direction: column;
-    } */
+    }
 
     .company-div {
         flex-direction: column;

@@ -2,7 +2,6 @@ import "../core/style/experience.css";
 
 import { experienceString } from "../core/constant/string";
 
-import { MoveRight } from "lucide-react";
 import { FaHeart } from "react-icons/fa";
 
 export default function Experience() {
@@ -16,13 +15,13 @@ export default function Experience() {
                         return (
                             <div className="work-card">
                                 <div className="card-left">
-                                    <p>{item.date}</p>
+                                    <p className="work-date">{item.date}</p>
                                 </div>
                                 {/* <div className="work-border" /> */}
                                 <div className="card-right">
                                     <h3 className="designation">{item.title}</h3>
                                     <h3 className="company">{item.subtitle}</h3>
-                                    <p>{item.description}</p>
+                                    <p style={{ whiteSpace: 'pre-line' }}>{item.description}</p>
                                     <div className="tag">
                                         {
                                             item.tags.map((tag) => (
@@ -36,13 +35,6 @@ export default function Experience() {
                     })
                 }
             </div>
-
-            <button
-                className="view-more"
-                onClick={() => window.open("/ctltiglao_cv.pdf", "_blank")}
-            >
-                <MoveRight size={18} /> {experienceString.viewMore}
-            </button>
         </section>
     );
 }
