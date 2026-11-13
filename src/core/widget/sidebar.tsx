@@ -26,23 +26,68 @@ const menu = [
 export default function Sidebar() {
     const [active, setActive] = useState("about");
 
+    // useEffect(() => {
+    //     const sections = document.querySelectorAll("section");
+
+    //     const observer = new IntersectionObserver(
+    //         (entries) => {
+    //             entries.forEach((entry) => {
+    //                 if (entry.isIntersecting) {
+    //                     setActive(entry.target.id);
+    //                 }
+    //             });
+    //         }, {
+    //         threshold: 0.5,
+    //     }
+    //     );
+
+    //     sections.forEach((section) => observer.observe(section));
+    //     return () => observer.disconnect();
+    // }, []);
+
     useEffect(() => {
-        const sections = document.querySelectorAll("section");
+        const handleScroll = () => {
+            const sections = menu
+                .map((item) => document.getElementById(item.id))
+                .filter((section): section is HTMLElement => section !== null);
 
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        setActive(entry.target.id);
-                    }
-                });
-            }, {
-            threshold: 0.5,
-        }
-        );
+            if (sections.length === 0) return;
 
-        sections.forEach((section) => observer.observe(section));
-        return () => observer.disconnect();
+            // Highlight the last section when reaching the bottom
+            const atBottom =
+                window.innerHeight + window.scrollY >=
+                document.documentElement.scrollHeight - 5;
+
+            if (atBottom) {
+                setActive(sections[sections.length - 1].id);
+                return;
+            }
+
+            // Determine which section has reached the activation line
+            const activationPoint = window.innerHeight * 0.35;
+
+            let currentSection = sections[0].id;
+
+            sections.forEach((section) => {
+                const top = section.getBoundingClientRect().top;
+
+                if (top <= activationPoint) {
+                    currentSection = section.id;
+                }
+            });
+
+            setActive(currentSection);
+        };
+
+        window.addEventListener("scroll", handleScroll, {
+            passive: true
+        });
+
+        handleScroll();
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
     }, []);
 
     return (

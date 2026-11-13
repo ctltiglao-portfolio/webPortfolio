@@ -32,6 +32,7 @@ const skills = [
 export default function About() {
     return (
         <section id="about" className="about">
+        {/* <section className="about"> */}
             {/* header */}
             <div className="about-header">
                 {/* left */}

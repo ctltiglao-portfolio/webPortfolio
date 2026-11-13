@@ -107,6 +107,7 @@ export default function Project() {
 
     return (
         <section id="projects" className="project">
+        {/* <section className="project"> */}
             <div className="project-body">
                 <h1>{projectString.subtitle} <FaHeart size={20} color="#F43F8C" /></h1>
 

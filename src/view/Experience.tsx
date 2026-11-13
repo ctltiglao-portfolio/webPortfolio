@@ -7,6 +7,7 @@ import { FaHeart } from "react-icons/fa";
 export default function Experience() {
     return (
         <section id="experience" className="experience">
+        {/* // <section className="experience"> */}
             <div className="work">
                 <h1>{experienceString.subtitle} <FaHeart size={24} color="#F43F8C" /></h1>
 
