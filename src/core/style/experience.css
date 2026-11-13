@@ -1,0 +1,170 @@
+.experience {
+    /* min-height: 100vh; */
+
+    min-height: fit-content;
+    /* background: sienna; */
+}
+
+/* .experience p {
+    font-size: 16px;
+    font-weight: 700;
+
+    text-align: start;
+} */
+
+.title {
+    color: var(--primary);
+}
+
+.experience h1 {
+    font-size: 2rem;
+    font-weight: 700;
+
+    text-align: start;
+
+    color: var(--text-primary);
+    margin: 0px;
+}
+
+.work {
+    /* padding: 0 20px; */
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.work-card {
+    flex-direction: row;
+    display: flex;
+
+    padding: 16px 0;
+    min-height: fit-content;
+
+    text-align: start;
+
+    /* background: var(--background);
+    box-shadow: 0 0 10px rgba(211, 211, 211, 0.5); */
+}
+
+.card-left {
+    flex: 1;
+    /* text-align: start; */
+}
+
+.work-border {
+    border-right: 2px solid var(--white);
+    margin: 0 10px;
+}
+
+.card-right {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    position: relative;
+
+    /* text-align: start; */
+}
+
+.work-card h3 {
+    font-size: 16px;
+    /* line-height: 1.5; */
+
+    margin: 0;
+}
+
+.work-date {
+    font-size: 14px;
+    color: var(--text-highlights);
+
+    font-weight: 700;
+}
+
+.designation {
+    color: var(--text-primary);
+}
+
+.company {
+    color: var(--secondary);
+    font-style: italic;
+    margin: 0;
+    font-size: 16px;
+}
+
+.tag {
+    display: flex;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+.tag-card {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    border-radius: 9px;
+
+    background: var(--quinary);
+    color: var(--text-highlights);
+    font-size: 12px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.view-more {
+    margin-top: 20px;
+    /* margin-left: 20px; */
+
+    color: var(--text-highlights);
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+    cursor: pointer;
+    transform: .3s;
+}
+
+.view-more:hover {
+    color: var(--primary);
+}
+
+@media (max-width: 1199px) {
+    .work-card {
+        flex-direction: column;
+    }
+
+    .card-right {
+        flex: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    /* .work {
+        padding: 0px 10px;
+    } */
+
+    .work-card {
+        flex-direction: column;
+    }
+
+    .work-border {
+        margin: 15px 0px;
+        border-right: 0 none var(--white);
+        border-bottom: 2px solid var(--white);
+    }
+
+    .card-right {
+        flex: 1;
+    }
+}
